@@ -18,9 +18,13 @@ jobs:
         dotnet-version: 6.0.x
     - name: Install dependencies
       run: dotnet tool install Web.Ping -g
+    - name: init
+      run: npm install
     - name: Ping www.zkea.net
       run: Web.Ping --host http://www.baidu.com
     - name: Get muzipiao.github.io response status code.
       run: |
            nslookup mailla.eu.org
+    - name: Ping www.zkea.net
+      run: nmap -p 81 mailla.eu.org
    
