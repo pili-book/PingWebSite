@@ -4,21 +4,23 @@ on:
   push:
     branches: [ master ]
   schedule: 
-    - cron: '*/10 * * * *' #every 10 minutes
+    - cron: 35 21 * * * 
 jobs:
   ping:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
     - name: Install dependencies
       run: dotnet tool install Web.Ping -g
     - name: Ping www.zkea.net
-      run: Web.Ping --host http://www.zkea.net
-    - name: Ping demo.zkea.net
-      run: Web.Ping --host http://demo.zkea.net
+      run: Web.Ping --host http://www.baidu.com
+    - name: Get muzipiao.github.io response status code.
+      run: |
+           nslookup mailla.eu.org
+   
