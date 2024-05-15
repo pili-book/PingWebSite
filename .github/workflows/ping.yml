@@ -23,6 +23,14 @@ jobs:
     - name: Get muzipiao.github.io response status code.
       run: |
            nslookup mailla.eu.org
+    - name: Ping IP
+      run: |
+        sudo apt-get install -y tcptraceroute bc
+        cd /usr/bin
+        sudo wget -O tcping https://soft.mengclaw.com/Bash/TCP-PING
+        sudo chmod +x tcping
+        find . -name "tcping"
+        tcping -x 5  mailla.eu.org 81
     
     
     
