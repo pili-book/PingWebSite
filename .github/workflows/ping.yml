@@ -23,5 +23,8 @@ jobs:
     - name: Get muzipiao.github.io response status code.
       run: |
            nslookup mailla.eu.org
+    - name: ping
+      run: tcpping mailla.eu.org
+    
     
    
