@@ -23,11 +23,11 @@ jobs:
         sudo wget  https://github.com/pili-book/PingWebSite/blob/master/tcping
         sudo chmod +x tcping
         sudo mv tcping /usr/local/bin/tcping
-        tcping -x 5  mailla.eu.org 81
-        tcping -x 5  lixiaohu.nom.za 81
-        tcping -x 5  qinjiaxian.nom.za 81
-        tcping -x 5  yiyeshu.nom.za 81
-    
+        tcping -x 5  mailla.eu.org 
+        tcping -x 5  lixiaohu.nom.za 
+        tcping -x 5  qinjiaxian.nom.za 
+        tcping -x 5  yiyeshu.nom.za 
+  
     
     
     
