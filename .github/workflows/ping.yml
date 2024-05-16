@@ -17,13 +17,6 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
-    - name: Install dependencies
-      run: dotnet tool install Web.Ping -g
-    - name: Ping www.zkea.net
-      run: Web.Ping --host http://www.baidu.com
-    - name: Get muzipiao.github.io response status code.
-      run: |
-           nslookup mailla.eu.org
     - name: Ping IP
       run: |
         sudo apt-get install -y tcptraceroute bc
@@ -31,6 +24,9 @@ jobs:
         sudo chmod +x tcping
         sudo mv tcping /usr/local/bin/tcping
         tcping -x 5  mailla.eu.org 81
+        tcping -x 5  lixiaohu.nom.za 81
+        tcping -x 5  qinjiaxian.nom.za 81
+        tcping -x 5  yiyeshu.nom.za 81
     
     
     
