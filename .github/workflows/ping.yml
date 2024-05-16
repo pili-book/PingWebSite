@@ -25,10 +25,12 @@ jobs:
            nslookup mailla.eu.org
     - name: Ping IP
       run: |
-        wget https://github.com/jankroon/estxtool/raw/master/tcping
-        chmod +x tcping
+        
+        sudo wget -O tcping https://soft.mengclaw.com/Bash/TCP-PING
+        sudo chmod +x tcping
         sudo mv tcping /usr/local/bin/tcping
         tcping -x 5  mailla.eu.org 81
+    
     
     
     
