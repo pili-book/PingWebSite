@@ -27,6 +27,6 @@ echo "$e"
 result1=$(echo $c | grep "${o}")
 result2=$(echo $c | grep "${o}")
 result3=$(echo $c | grep "${o}")
-if [ "$result1" = "" ]||[ "$result2" != "" ]||[ "$result3" != "" ]; then
+if [ "$result1" != "" ]||[ "$result2" != "" ]||[ "$result3" != "" ]; then
 wx "github提醒您，您的nom域名通过了，请迅速查收"
 fi
