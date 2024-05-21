@@ -10,7 +10,8 @@ jobs:
   ping:
 
     runs-on: ubuntu-latest
-
+    environment: 
+      name: webhook
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET Core
@@ -23,10 +24,13 @@ jobs:
         sudo chmod +x ./tcping
         sudo mv tcping /usr/local/bin/tcping
         tcping -x 5  mailla.eu.org 81
-        tcping -x 5  lixiaohu.nom.za 
-        tcping -x 5  qinjiaxian.nom.za 
-        tcping -x 5  yiyeshu.nom.za 
-  
+        tcping -x 5  www.baidu.com 
+    - name: Ping IP
+      env:
+        WEBHOOK: ${{ secrets.WEBHOOK }}
+      run: |
+        sudo chmod +x domainping.sh
+        ./domainping.sh
     
     
     
