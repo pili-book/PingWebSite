@@ -26,13 +26,14 @@ sh $0.msg && rm -rf $0.msg
 #echo "$e"
 li=$(dig +trace lixiaohu.nom.za)
 echo "$li"
-ns=ins1.c6dns.com
+qin=$(dig +trace qinjiaxian.nom.za)
+echo "$qin"
+yi=$(dig +trace yiyeshu.nom.za)
+echo "$yi"
+ns=rhinoceros.dnspod.net
 result1=$(echo $li | grep "${ns}")
-echo "$result1"
-#result1=$(echo $c | grep "${o}")
-#result2=$(echo $c | grep "${o}")
-#result3=$(echo $c | grep "${o}")
-
+result2=$(echo $qin | grep "${ns}")
+result3=$(echo $yi | grep "${ns}")
 if [ "$result1" != "" ]||[ "$result2" != "" ]||[ "$result3" != "" ]; then
 wx "github提醒您，您的nom域名通过了，请迅速查收"
 fi
