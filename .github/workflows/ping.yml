@@ -31,9 +31,7 @@ jobs:
       run: |
         sudo chmod +x domainping.sh
         ./domainping.sh
-    - name: Get DNS Servers
-      run: |
-          dig +trace lixiaohu.nom.za
+  
           
     
     
