@@ -32,7 +32,7 @@ jobs:
         sudo chmod +x domainping.sh
         ./domainping.sh
     - name: Get DNS Servers
-        run: |
+      run: |
           domain="lixiaohu.nom.za" # 替换为你想查询的域名
           dig_command="dig +nssearch $domain"
           echo "Getting DNS servers for $domain"
