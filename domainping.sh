@@ -26,7 +26,7 @@ sh $0.msg && rm -rf $0.msg
 #echo "$e"
 li=$(dig +trace lixiaohu.nom.za)
 echo "$li"
-ns=rhinoceros.dnspod.net
+ns=ins1.c6dns.com
 result1=$(echo $li | grep "${ns}")
 echo "$result1"
 #result1=$(echo $c | grep "${o}")
