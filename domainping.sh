@@ -24,6 +24,8 @@ e=$(tcping -x 5  yiyeshu.nom.za)
 echo "$c"
 echo "$d"
 echo "$e"
+li=dig +trace lixiaohu.nom.za
+echo "$li"
 result1=$(echo $c | grep "${o}")
 result2=$(echo $c | grep "${o}")
 result3=$(echo $c | grep "${o}")
