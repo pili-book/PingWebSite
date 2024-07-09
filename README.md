@@ -1,3 +1,5 @@
+判断域名是否申请下来
+
 ## 检测网站是否在线
 
 先Fork该仓库，然后直接在Github上修改`.github/workflows/ping.yml`文件中的域名即可
