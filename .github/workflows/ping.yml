@@ -24,7 +24,7 @@ jobs:
         sudo chmod +x ./tcping
         sudo mv tcping /usr/local/bin/tcping
         tcping -x 5  mailla.eu.org 81
-        tcping -x 5  www.baidu.com 
+        tcping -x 5  yeyeshu.lgbt.sh 81
     - name: Ping IP
       env:
         WEBHOOK: ${{ secrets.WEBHOOK }}
